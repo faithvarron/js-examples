@@ -1,0 +1,124 @@
+<script type='text/javascript' src='top.js'></script>
+<script type='text/javascript' src='async.js' async ></script>
+<script>
+console.log("I am out of html, at top");
+if(null===document.html){
+    console.log("TOP : html not ready");
+} else {
+    console.log("TOP: html Ready");
+}
+if(null===document.head){
+    console.log("TOP: header not ready");
+} else {
+    console.log("TOP: header Ready");
+}
+
+if(null===document.body){
+    console.log("TOP: body not ready");
+} else {
+    console.log("TOP: body Ready");
+}
+</script>
+<!DOCTYPE html>
+<html>
+<script>
+console.log("I am out of body and header, at top");
+if(null===document.html){
+    console.log("HTML: html not ready");
+} else {
+    console.log("HTML: html Ready");
+}
+if(null===document.head){
+    console.log("HTML: header not ready");
+} else {
+    console.log("HTML: header Ready");
+}
+
+if(null===document.body){
+    console.log("HTML: body not ready");
+} else {
+    console.log("HTML: body Ready");
+}
+</script>
+<head>
+<script>
+console.log("I am in header");
+if(null===document.html){
+    console.log("HEAD: html not ready");
+} else {
+    console.log("HEAD: html Ready");
+}
+if(null===document.head){
+    console.log("HEAD: header not ready");
+} else {
+    console.log("HEAD: header Ready");
+}
+
+if(null===document.body){
+    console.log("HEAD: body not ready");
+} else {
+    console.log("HEAD: body Ready");
+}
+</script>
+</head>
+<body id="1">
+<script>
+console.log("I am in body");
+if(null===document.html){
+    console.log("BODY: html not ready");
+} else {
+    console.log("BODY: html Ready");
+}
+if(null===document.head){
+    console.log("BODY: header not ready");
+} else {
+    console.log("BODY: header Ready");
+}
+
+if(null===document.body){
+    console.log("BODY: body not ready");
+} else {
+    console.log("BODY: body Ready");
+}
+</script>
+</body>
+<script type='text/javascript' src='bottom.js'></script>
+<script>
+console.log("I am out of body and header, at bottom");
+if(null===document.html){
+    console.log("BOTTOM: html not ready");
+} else {
+    console.log("BOTTOM: html Ready");
+}
+if(null===document.head){
+    console.log("BOTTOM: header not ready");
+} else {
+    console.log("BOTTOM: header Ready");
+}
+
+if(null===document.body){
+    console.log("BOTTOM: body not ready");
+} else {
+    console.log("BOTTOM: body Ready");
+}
+</script>
+</html>
+<script>
+console.log("I am out of html, at bottom");
+if(null===document.html){
+    console.log("AFTER: html not ready");
+} else {
+    console.log("AFTER: html Ready");
+}
+if(null===document.head){
+    console.log("AFTER: header not ready");
+} else {
+    console.log("AFTER: header Ready");
+}
+
+if(null===document.body){
+    console.log("AFTER: body not ready");
+} else {
+    console.log("AFTER: body Ready");
+}
+</script>
