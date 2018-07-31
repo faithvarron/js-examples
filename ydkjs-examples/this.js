@@ -34,10 +34,33 @@ function fooStrict(p1,p2) {
     console.log("my first arg p1 is" , p1);
     console.log("my first arg p2 is" , p2);
 }
+function fooSelf(p1,p2) {
+    var self = this;
+    setTimeout(function(){
+      console.log("I am ", self);
+      console.log("my name is", self.name);
+	  console.log("myvar a is ", self.a);
+      console.log("my first arg p1 is" , p1);
+      console.log("my first arg p2 is" , p2);
+    },10);
+
+}
+function fooArrow(p1,p2) {
+    setTimeout( () => {
+    console.log("I am ", this);
+    console.log("my name is", this.name);
+	console.log("myvar a is ", this.a);
+    console.log("my first arg p1 is" , p1);
+    console.log("my first arg p2 is" , p2);    
+    },10);
+}
 var obj = {
     name:'myobj',
     a: "myvar"
 }
+fooSelf('selfish','function');
+fooArrow('fat', 'arrow');
+
 var foo1 = new foo(1,2); // Called with new? foo should be "this"
 var foo2 = foo.call(obj,2,3); // Called with call or apply (or bind)? obj should be "this"
 var foo3 = foo.apply(obj,[3,4]); // Called with call or apply (or bind)? obj should be "this"
@@ -55,3 +78,4 @@ var fooStrict3 = fooStrict.apply(obj,[3,4]); // Called with call or apply (or bi
 var fooStrict4 = fooStrict.bind(obj);// Called with call or apply (or bind)? "obj" should be "this"
 fooStrict4(4,5);
 var fooStrict5 = fooStrict(5,6);// Default: undefined in strict mode, global object otherwise. "undefined" should be "this"
+
