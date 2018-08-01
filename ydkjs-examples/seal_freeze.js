@@ -16,6 +16,8 @@ console.log(Object.getOwnPropertyDescriptor(myObject, "b"));
 console.log(Object.getOwnPropertyDescriptor(myObject, "c"));
 console.log(Object.getOwnPropertyDescriptor(topObject, "d"));
 
+//delete myObject.a; // not possible as we sealed myObject
+
 Object.freeze(myObject);
 console.log(Object.getOwnPropertyDescriptor(myObject, "a"));
 console.log(Object.getOwnPropertyDescriptor(myObject, "b"));
