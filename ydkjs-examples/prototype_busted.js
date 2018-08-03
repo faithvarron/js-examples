@@ -16,3 +16,4 @@ Object.defineProperty( Foo.prototype, "constructor" , {
 console.log(a1.constructor === Foo); // false!
 console.log(a1.constructor === Object); // false!
 console.log(a1.constructor);
+// mmmm
